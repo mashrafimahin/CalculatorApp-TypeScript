@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e7e7e7;
+}
+
+.calc {
+  padding: 2rem;
+  background: #fff;
+  border: 2px solid #d7d7d7;
+  border-radius: 10px;
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.display {
+  border: 2px solid #999;
+  padding: 1rem 1.4rem;
+  min-height: 5rem;
+  border-radius: 8px;
+}
+
+.display h1 {
+  font-size: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #222;
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+button {
+  padding: 16px 20px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  font-family: "Courier New", Courier, monospace;
+  color: #222;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  box-shadow:
+    0 4px 4px 0 #eee,
+    inset 0 0 1px 0 #999;
+  border-radius: 8px;
+  transition: all 0.1s ease-in-out;
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 0 4px 0 #eee,
+    inset 0 0 1px 0 #999;
+}
