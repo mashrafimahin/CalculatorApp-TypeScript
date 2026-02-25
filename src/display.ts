@@ -1,3 +1,6 @@
+// component
+import { Calc } from "./calc";
+// main
 export function Display(doc: HTMLDivElement | null) {
   if (!doc) return;
   // targets
@@ -11,15 +14,18 @@ export function Display(doc: HTMLDivElement | null) {
   btns?.forEach((btn) =>
     btn.addEventListener("click", (e) => {
       // target set
-      const currTarget = e.target;
+      const currTarget = e.target as HTMLButtonElement;
+      // value
+      const num = currTarget.value;
       // condition
-      if (currTarget instanceof HTMLButtonElement && currTarget.value) {
-        // clear
-        if (currTarget.value === "ac") {
-          temp = "";
-        } else {
-          temp += currTarget.value;
-        }
+      if (num === "ac") {
+        temp = "";
+      } else if (num === "ce") {
+        temp = temp.slice(0, -1);
+      } else if (num === "equal") {
+        temp = Calc(temp);
+      } else {
+        temp += num;
       }
       // print
       currentDisplay.textContent = temp;

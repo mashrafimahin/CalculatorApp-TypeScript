@@ -58,6 +58,21 @@ button {
   transition: all 0.1s ease-in-out;
 }
 
+button.clear {
+  color: #fff;
+  background: red;
+}
+
+button.once {
+  color: #fff;
+  background: green;
+}
+
+button.optr {
+  color: #fff;
+  background: orange;
+}
+
 button:active {
   transform: translateY(4px);
   box-shadow:

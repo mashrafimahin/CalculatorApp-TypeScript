@@ -1,1 +1,4 @@
-type OperationKey = "add" | "substract" | "multiply" | "divide";
+export function Calc(val: string): string {
+  let result = eval(val);
+  return result.toString();
+}
